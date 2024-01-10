@@ -1,6 +1,6 @@
 <?php
 
-namespace Karomap\GeoLaravel\DoctrineTypes;
+namespace App\DoctrineTypes;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\Type;

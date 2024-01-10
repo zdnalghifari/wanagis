@@ -71,12 +71,12 @@
                     <div class="col-md-10 ml-auto mr-auto">
                         <div class="row collections">
                             <div class="col-md-6">
-                                <img src="../assets/img/bg6.jpg" class="img-raised">
-                                <img src="../assets/img/bg11.jpg" alt="" class="img-raised">
+                                <img src="../assets/img/t1.jpg" class="img-raised">
+                                <img src="../assets/img/t2.jpg" alt="" class="img-raised">
                             </div>
                             <div class="col-md-6">
-                                <img src="../assets/img/bg7.jpg" alt="" class="img-raised">
-                                <img src="../assets/img/bg8.jpg" alt="" class="img-raised">
+                                <img src="../assets/img/f1.jpg" alt="" class="img-raised">
+                                <img src="../assets/img/f2.jpg" alt="" class="img-raised">
                             </div>
                         </div>
                     </div>
@@ -85,12 +85,12 @@
                     <div class="col-md-10 ml-auto mr-auto">
                         <div class="row collections">
                             <div class="col-md-6">
-                                <img src="../assets/img/bg3.jpg" alt="" class="img-raised">
-                                <img src="../assets/img/bg8.jpg" alt="" class="img-raised">
+                                <img src="../assets/img/h1.jpg" alt="" class="img-raised">
+                                <img src="../assets/img/h5.jpg" alt="" class="img-raised">
                             </div>
                             <div class="col-md-6">
-                                <img src="../assets/img/bg7.jpg" alt="" class="img-raised">
-                                <img src="../assets/img/bg6.jpg" class="img-raised">
+                                <img src="../assets/img/h3.jpg" alt="" class="img-raised">
+                                <img src="../assets/img/h6.jpg" class="img-raised">
                             </div>
                         </div>
                     </div>
@@ -112,11 +112,11 @@
                                     produk
                                     proyek akhir.
                                 </p>
-                                <a href="#pablo" class="btn btn-success btn-icon btn-round"><i
-                                        class="fab fa-twitter"></i></a>
-                                <a href="#pablo" class="btn btn-success btn-icon btn-round"><i
+                                <a onclick="window.open('https://www.linkedin.com/in/zaidan-al-ghifari-fahlevi-0b359a1a7/','_blank')"
+                                    style="color: white" class="btn btn-success btn-icon btn-round"><i
                                         class="fab fa-linkedin"></i></a>
-                                <a href="#pablo" class="btn btn-success btn-icon btn-round"><i
+                                <a onclick="window.open('https://wa.me/+6285156103465?text=Halo,%20Saya%20menghubungi%20anda%20ingin%20bertanya%20terkait%20WANAGIS','_blank')"
+                                    style="color: white" class="btn btn-success btn-icon btn-round"><i
                                         class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
@@ -128,9 +128,8 @@
                                 <p class="category text-success">Content | Kehutanan - Universitas Gadjah Mada</p>
                                 <p>Berperan dalam membuat logo dan konten dalam <a href="/">WANAGIS</a>.
                                 </p>
-                                <a href="#pablo" class="btn btn-success btn-icon btn-round"><i
-                                        class="fab fa-twitter"></i></a>
-                                <a href="#pablo" class="btn btn-success btn-icon btn-round"><i
+                                <a onclick="window.open('https://www.linkedin.com/in/syifa-salsabila-b1972021b/','_blank')"
+                                    style="color: white" class="btn btn-success btn-icon btn-round"><i
                                         class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
@@ -260,13 +259,16 @@
                             <h6 class="text-uppercase fw-bold mb-4">
                                 Didukung oleh </h6>
                             <p>
-                                <a href="#!" class="text-reset">SIG UGM</a>
+                                <a onclick="window.open('https://sig.sv.ugm.ac.id/','_blank')" class="text-reset">SIG
+                                    UGM</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-reset">Wanagama</a>
+                                <a onclick="window.open('https://wanagama.fkt.ugm.ac.id/','_blank')"
+                                    class="text-reset">Wanagama</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-reset">Karomap</a>
+                                <a onclick="window.open('https://www.karomap.com/','_blank')"
+                                    class="text-reset">Karomap</a>
                             </p>
                         </div>
                         <!-- Grid column -->

@@ -460,13 +460,16 @@
                             <h6 class="text-uppercase fw-bold mb-4">
                                 Didukung oleh </h6>
                             <p>
-                                <a href="#!" class="text-reset">SIG UGM</a>
+                                <a onclick="window.open('https://sig.sv.ugm.ac.id/','_blank')" class="text-reset">SIG
+                                    UGM</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-reset">Wanagama</a>
+                                <a onclick="window.open('https://wanagama.fkt.ugm.ac.id/','_blank')"
+                                    class="text-reset">Wanagama</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-reset">Karomap</a>
+                                <a onclick="window.open('https://www.karomap.com/','_blank')"
+                                    class="text-reset">Karomap</a>
                             </p>
                         </div>
                         <!-- Grid column -->

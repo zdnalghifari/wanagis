@@ -31,9 +31,24 @@
                 style="width:20px;height:20px;filter:brightness(0) invert(1);vertical-align:middle"></button>
     </div>
 @else
-    <div class="exportButtonDiv" title="Export Data" style="pointer-events: auto; z-index: 1000">
-        <button disabled="true" class="myButton" id="exportButton"><img src="/assets/img/export.png"
-                style="width:20px;height:20px;filter:brightness(0) invert(1);vertical-align:middle"></button>
+    <div class="btn-group dropup exportButtonDiv" title="Export Data" style="pointer-events: auto; z-index: 1000">
+        <button disabled="true" id="exportButton" type="button" class="dropdown-toggle dropdown-toggle-split myButton"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img src="/assets/img/export.png"
+                style="width:15px;height:15px;filter:brightness(0) invert(1);vertical-align:middle">
+        </button>
+        <div class="dropdown-menu">
+            <a id="batasLokasiExport" class="dropdown-item" href="#">Batas Lokasi</a>
+            <a id="jenisTanahExport" class="dropdown-item" href="#">Jenis Tanah</a>
+            <a id="lerengExport" class="dropdown-item" href="#">Kelerengan</a>
+            <a id="lahanExport" class="dropdown-item" href="#">Tutupan Lahan</a>
+            <div class="dropdown-divider"></div>
+            <a id="poinKeteranganExport" class="dropdown-item" href="#">Poin Keterangan</a>
+            <a id="bangunanExport" class="dropdown-item" href="#">Bangunan</a>
+            <a id="gorongExport" class="dropdown-item" href="#">Gorong-gorong</a>
+            <a id="jalanBatuExport" class="dropdown-item" href="#">Jalan Batu</a>
+            <a id="petakUjiExport" class="dropdown-item" href="#">Petak Uji</a>
+        </div>
     </div>
     <div class="downloadButtonDiv" title="Download Map" style="pointer-events: auto; z-index: 1000">
         <button disabled="true" class="myButton" id="downloadButton"><img src="/assets/img/downloadmap.png"

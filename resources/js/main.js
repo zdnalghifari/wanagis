@@ -42,10 +42,10 @@ const bangunan = new VectorLayer({
     showinfo: true,
     source: new VectorSource({
         format: new GeoJSON(),
-        url: '/geojson/W05_Bangunan',
+        url: '/geojson/w05_bangunan',
     }),
     zIndex: 12,
-    visible: true,
+    visible: false,
     style: new Style({
         image: new RegularShape({
             radius: 5,
@@ -66,7 +66,7 @@ const ujiPetak = new VectorLayer({
     showinfo: true,
     source: new VectorSource({
         format: new GeoJSON(),
-        url: '/geojson/W05_BatasUji',
+        url: '/geojson/w05_batasuji',
     }),
     zIndex: 11,
     visible: true,
@@ -83,10 +83,10 @@ const gorong = new VectorLayer({
     showinfo: true,
     source: new VectorSource({
         format: new GeoJSON(),
-        url: '/geojson/W05_Gorong',
+        url: '/geojson/w05_gorong',
     }),
     zIndex: 12,
-    visible: true,
+    visible: false,
     style: new Style({
         image: new Circle({
             radius: 5,
@@ -106,7 +106,7 @@ const jlnAspal = new VectorLayer({
     showinfo: true,
     source: new VectorSource({
         format: new GeoJSON(),
-        url: '/geojson/W05_JalanAspal',
+        url: '/geojson/w05_jalanaspal',
     }),
     zIndex: 11,
     visible: true,
@@ -123,7 +123,7 @@ const jlnBatu = new VectorLayer({
     showinfo: true,
     source: new VectorSource({
         format: new GeoJSON(),
-        url: '/geojson/W05_JalanBatu',
+        url: '/geojson/w05_jalanbatu',
     }),
     zIndex: 11,
     visible: true,
@@ -142,10 +142,10 @@ const permukiman = new VectorLayer({
     showinfo: true,
     source: new VectorSource({
         format: new GeoJSON(),
-        url: '/geojson/W05_Permukiman',
+        url: '/geojson/w05_permukiman',
     }),
     zIndex: 10,
-    visible: true,
+    visible: false,
     style: new Style({
         fill: new Fill({
             color: [250, 105, 9, 1],
@@ -161,7 +161,7 @@ const poin = new VectorLayer({
     showinfo: true,
     source: new VectorSource({
         format: new GeoJSON(),
-        url: '/geojson/W05_PoinKeterangan',
+        url: '/geojson/w05_poinketerangan',
     }),
     zIndex: 12,
     visible: true,
@@ -175,7 +175,7 @@ const poin = new VectorLayer({
             text: new Text({
                 textAlign: 'center',
                 textBaseline: 'bottom',
-                text: feature.get('KET'),
+                text: feature.get('ket'),
                 font: '10px Arial,sans-serif',
                 weight: 'Bold',
                 fill: new Fill({ color: 'white' }),
@@ -197,7 +197,7 @@ const sungai = new VectorLayer({
     showinfo: true,
     source: new VectorSource({
         format: new GeoJSON(),
-        url: '/geojson/W05_Sungai',
+        url: '/geojson/w05_sungai',
     }),
     zIndex: 11,
     visible: true,
@@ -217,7 +217,7 @@ const lokasi = new VectorLayer({
     showinfo: true,
     source: new VectorSource({
         format: new GeoJSON(),
-        url: '/geojson/batasPetak',
+        url: '/geojson/bataspetak',
     }),
     zIndex: 10,
     visible: true,
@@ -250,24 +250,25 @@ const jenisTanah = new VectorLayer({
     showinfo: true,
     source: new VectorSource({
         format: new GeoJSON(),
-        url: '/geojson/jenisTanah',
+        url: '/geojson/jenistanah',
     }),
     zIndex: 10,
     visible: false,
     style: function (feature, resolution) {
-        if (feature.get('JENIS_TNH') === 'MEDIT.MERAH&RENDZINA') {
+        if (feature.get('jenis_tnh') === 'MEDIT.MERAH&RENDZINA') {
             return new Style({
                 fill: new Fill({ color: 'rgba(170, 87, 9, 1' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
-        if (feature.get('JENIS_TNH') === 'RENDZINA') {
+        if (feature.get('jenis_tnh') === 'RENDZINA') {
             return new Style({
                 fill: new Fill({ color: 'rgba(120, 30, 15, 1' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
     },
+    declutter: false,
 });
 
 const lereng = new VectorLayer({
@@ -280,31 +281,31 @@ const lereng = new VectorLayer({
     zIndex: 10,
     visible: false,
     style: function (feature, resolution) {
-        if (feature.get('KET') === 'Datar') {
+        if (feature.get('ket') === 'Datar') {
             return new Style({
                 fill: new Fill({ color: 'rgba(16, 176, 70, 1' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
-        if (feature.get('KET') === 'Landai') {
+        if (feature.get('ket') === 'Landai') {
             return new Style({
                 fill: new Fill({ color: 'rgba(126, 241, 10, 1' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
-        if (feature.get('KET') === 'Berombak') {
+        if (feature.get('ket') === 'Berombak') {
             return new Style({
                 fill: new Fill({ color: 'rgba(243, 239, 9, 1' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
-        if (feature.get('KET') === 'Lereng') {
+        if (feature.get('ket') === 'Lereng') {
             return new Style({
                 fill: new Fill({ color: 'rgba(248, 161, 3, 1' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
-        if (feature.get('KET') === 'Curam') {
+        if (feature.get('ket') === 'Curam') {
             return new Style({
                 fill: new Fill({ color: 'rgba(249, 72, 8, 1' }),
                 stroke: new Stroke({ color: 'white' }),
@@ -318,142 +319,142 @@ const penutupLahan = new VectorLayer({
     showinfo: true,
     source: new VectorSource({
         format: new GeoJSON(),
-        url: '/geojson/tutupanLahan',
+        url: '/geojson/tutupanlahan',
     }),
     zIndex: 10,
     visible: false,
     style: function (feature, resolution) {
         if (
-            feature.get('Penutupan') === 'Bangunan' ||
-            feature.get('Penutupan') === 'Rumah Peneliti' ||
-            feature.get('Penutupan') === 'Museum Kayu' ||
-            feature.get('Penutupan') === 'Wisma Cendana' ||
-            feature.get('Penutupan') === 'Wanagama Paksi' ||
-            feature.get('Penutupan') === 'Persemaian'
+            feature.get('penutupan') === 'Bangunan' ||
+            feature.get('penutupan') === 'Rumah Peneliti' ||
+            feature.get('penutupan') === 'Museum Kayu' ||
+            feature.get('penutupan') === 'Wisma Cendana' ||
+            feature.get('penutupan') === 'Wanagama Paksi' ||
+            feature.get('penutupan') === 'Persemaian'
         ) {
             return new Style({ fill: new Fill({ color: 'black' }), stroke: new Stroke({ color: 'white' }) });
         }
-        if (feature.get('Penutupan') === 'Agroforestri') {
+        if (feature.get('penutupan') === 'Agroforestri') {
             return new Style({
                 fill: new Fill({ color: 'rgba(172, 235, 17, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
-        if (feature.get('Penutupan') === 'Akasia') {
+        if (feature.get('penutupan') === 'Akasia') {
             return new Style({
                 fill: new Fill({ color: 'rgba(38, 111, 2, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
-        if (feature.get('Penutupan') === 'Bambu') {
+        if (feature.get('penutupan') === 'Bambu') {
             return new Style({
                 fill: new Fill({ color: 'rgba(78, 130, 52, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
-        if (feature.get('Penutupan') === 'Belukar') {
+        if (feature.get('penutupan') === 'Belukar') {
             return new Style({
                 fill: new Fill({ color: 'rgba(77, 154, 61, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
-        if (feature.get('Penutupan') === 'Cemara Udang') {
+        if (feature.get('penutupan') === 'Cemara Udang') {
             return new Style({
                 fill: new Fill({ color: 'rgba(128, 231, 8, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
-        if (feature.get('Penutupan') === 'Danau') {
+        if (feature.get('penutupan') === 'Danau') {
             return new Style({
                 fill: new Fill({ color: 'rgba(91, 255, 237, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
-        if (feature.get('Penutupan') === 'Duwet') {
+        if (feature.get('penutupan') === 'Duwet') {
             return new Style({
                 fill: new Fill({ color: 'rgba(148, 76, 126, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
-        if (feature.get('Penutupan') === 'Eucalyptus') {
+        if (feature.get('penutupan') === 'Eucalyptus') {
             return new Style({
                 fill: new Fill({ color: 'rgba(237, 160, 128, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
-        if (feature.get('Penutupan') === 'Gliriside') {
+        if (feature.get('penutupan') === 'Gliriside') {
             return new Style({
                 fill: new Fill({ color: 'rgba(163, 122, 104, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
-        if (feature.get('Penutupan') === 'Gmelina') {
+        if (feature.get('penutupan') === 'Gmelina') {
             return new Style({
                 fill: new Fill({ color: 'rgba(121, 35, 35, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
-        if (feature.get('Penutupan') === 'Jabon') {
+        if (feature.get('penutupan') === 'Jabon') {
             return new Style({
                 fill: new Fill({ color: 'rgba(204, 109, 151, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
-        if (feature.get('Penutupan') === 'Jalan') {
+        if (feature.get('penutupan') === 'Jalan') {
             return new Style({
                 fill: new Fill({ color: 'rgba(245, 30, 0, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
-        if (feature.get('Penutupan') === 'Jati') {
+        if (feature.get('penutupan') === 'Jati') {
             return new Style({
                 fill: new Fill({ color: 'rgba(175, 84, 0, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
-        if (feature.get('Penutupan') === 'Kayuputih') {
+        if (feature.get('penutupan') === 'Kayuputih') {
             return new Style({
                 fill: new Fill({ color: 'rgba(152, 187, 110, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
-        if (feature.get('Penutupan') === 'Lahan Terbuka') {
+        if (feature.get('penutupan') === 'Lahan Terbuka') {
             return new Style({
                 fill: new Fill({ color: 'rgba(255, 255, 255, 1)' }),
                 stroke: new Stroke({ color: 'black' }),
             });
         }
-        if (feature.get('Penutupan') === 'Leda') {
+        if (feature.get('penutupan') === 'Leda') {
             return new Style({
                 fill: new Fill({ color: 'rgba(112, 95, 175, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
-        if (feature.get('Penutupan') === 'Mahoni') {
+        if (feature.get('penutupan') === 'Mahoni') {
             return new Style({
                 fill: new Fill({ color: 'rgba(176, 202, 19, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
-        if (feature.get('Penutupan') === 'Salam') {
+        if (feature.get('penutupan') === 'Salam') {
             return new Style({
                 fill: new Fill({ color: 'rgba(8, 142, 52, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
-        if (feature.get('Penutupan') === 'Sungai') {
+        if (feature.get('penutupan') === 'Sungai') {
             return new Style({
                 fill: new Fill({ color: 'rgba(11, 228, 245, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
-        if (feature.get('Penutupan') === 'Tegakan Campur') {
+        if (feature.get('penutupan') === 'Tegakan Campur') {
             return new Style({
                 fill: new Fill({ color: 'rgba(196, 253, 9, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
-        if (feature.get('Penutupan') === 'Trembesi') {
+        if (feature.get('penutupan') === 'Trembesi') {
             return new Style({
                 fill: new Fill({ color: 'rgba(179, 161, 9, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
@@ -533,6 +534,9 @@ const featureOverlay = new VectorLayer({
     source: new VectorSource(),
     map: map,
     style: new Style({
+        image: new Circle({
+            stroke: new Stroke({ color: 'rgba(6, 247, 242, 1)', width: 3 }),
+        }),
         stroke: new Stroke({
             color: 'rgba(6, 247, 242, 1)',
             width: 3,
@@ -1011,23 +1015,236 @@ layerLegend.addItem({
     typeGeom: 'Polygon',
     style: lokasi.getStyle(),
 });
-
 jenisTanahLegend.addItem({
-    title: 'Jenis Tanah',
+    title: 'Medit Merah & Rendzina',
     typeGeom: 'Polygon',
-    style: jenisTanah.getStyle(),
+    style: new Style({
+        fill: new Fill({ color: 'rgba(170, 87, 9, 1' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
+});
+jenisTanahLegend.addItem({
+    title: 'Rendzina',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(120, 30, 15, 1' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
 });
 
 lerengLegend.addItem({
-    title: 'Kelerengan',
+    title: 'Datar',
     typeGeom: 'Polygon',
-    style: lereng.getStyle(),
+    style: new Style({
+        fill: new Fill({ color: 'rgba(16, 176, 70, 1' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
+});
+lerengLegend.addItem({
+    title: 'Landai',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(126, 241, 10, 1' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
+});
+lerengLegend.addItem({
+    title: 'Berombak',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(243, 239, 9, 1' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
+});
+lerengLegend.addItem({
+    title: 'Lereng',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(248, 161, 3, 1' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
+});
+lerengLegend.addItem({
+    title: 'Curam',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(249, 72, 8, 1' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
 });
 
 tutupLahanLegend.addItem({
-    title: 'Tutupan Lahan',
+    title: 'Bangunan',
     typeGeom: 'Polygon',
-    style: penutupLahan.getStyle('Penutupan'),
+    style: new Style({ fill: new Fill({ color: 'black' }), stroke: new Stroke({ color: 'white' }) }),
+});
+tutupLahanLegend.addItem({
+    title: 'Agroforestri',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(172, 235, 17, 1)' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
+});
+tutupLahanLegend.addItem({
+    title: 'Akasia',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(38, 111, 2, 1)' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
+});
+tutupLahanLegend.addItem({
+    title: 'Bambu',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(78, 130, 52, 1)' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
+});
+tutupLahanLegend.addItem({
+    title: 'Belukar',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(77, 154, 61, 1)' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
+});
+tutupLahanLegend.addItem({
+    title: 'Cemara Udang',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(128, 231, 8, 1)' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
+});
+tutupLahanLegend.addItem({
+    title: 'Danau',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(91, 255, 237, 1)' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
+});
+tutupLahanLegend.addItem({
+    title: 'Duwet',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(148, 76, 126, 1)' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
+});
+tutupLahanLegend.addItem({
+    title: 'Eucalyptus',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(237, 160, 128, 1)' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
+});
+tutupLahanLegend.addItem({
+    title: 'Gliriside',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(163, 122, 104, 1)' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
+});
+tutupLahanLegend.addItem({
+    title: 'Gmelina',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(121, 35, 35, 1)' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
+});
+tutupLahanLegend.addItem({
+    title: 'Jabon',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(204, 109, 151, 1)' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
+});
+tutupLahanLegend.addItem({
+    title: 'Jalan',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(245, 30, 0, 1)' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
+});
+tutupLahanLegend.addItem({
+    title: 'Jati',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(175, 84, 0, 1)' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
+});
+tutupLahanLegend.addItem({
+    title: 'Kayuputih',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(152, 187, 110, 1)' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
+});
+tutupLahanLegend.addItem({
+    title: 'Lahan Terbuka',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(255, 255, 255, 1)' }),
+        stroke: new Stroke({ color: 'black' }),
+    }),
+});
+tutupLahanLegend.addItem({
+    title: 'Leda',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(112, 95, 175, 1)' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
+});
+tutupLahanLegend.addItem({
+    title: 'Mahoni',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(176, 202, 19, 1)' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
+});
+tutupLahanLegend.addItem({
+    title: 'Salam',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(8, 142, 52, 1)' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
+});
+tutupLahanLegend.addItem({
+    title: 'Sungai',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(11, 228, 245, 1)' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
+});
+tutupLahanLegend.addItem({
+    title: 'Tegakan Campur',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(196, 253, 9, 1)' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
+});
+tutupLahanLegend.addItem({
+    title: 'Trembesi',
+    typeGeom: 'Polygon',
+    style: new Style({
+        fill: new Fill({ color: 'rgba(179, 161, 9, 1)' }),
+        stroke: new Stroke({ color: 'white' }),
+    }),
 });
 
 sungaiLegend.addItem({
@@ -1141,6 +1358,8 @@ const taControl = new Control({
     element: taEl,
 });
 
+const taSelect = document.querySelector('#ta-value');
+
 taButton.addEventListener(
     'click',
     () => {
@@ -1148,6 +1367,29 @@ taButton.addEventListener(
     },
     2000,
 );
+
+taSelect.addEventListener('change', () => {
+    let source;
+    switch (taSelect.value) {
+        case '1':
+            source = lokasi.getSource();
+            break;
+
+        case '2':
+            source = jenisTanah.getSource();
+            break;
+
+        default:
+            source = lokasi.getSource();
+            break;
+    }
+
+    source.once('featuresloadend', () => {
+        showAttributeTable(source);
+    });
+    source.loadFeatures(createEmpty(), Infinity, mapView.getProjection());
+    showAttributeTable(source);
+});
 
 map.addControl(taControl);
 

@@ -3,8 +3,20 @@
 use App\Http\Controllers\GeoJSONController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
 Auth::routes();
+
+Route::get('/test-database', function () {
+    try {
+        // Establish the database connection
+        DB::connection()->getPdo();
+
+        echo "Connected to the database successfully!";
+    } catch (\Exception $e) {
+        die("Could not connect to the database. Error: " . $e->getMessage());
+    }
+});
 
 Route::get('geojson/{table}/{geom?}', GeoJSONController::class);
 

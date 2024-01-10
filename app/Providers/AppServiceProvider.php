@@ -4,13 +4,13 @@ namespace App\Providers;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
-use Karomap\GeoLaravel\DoctrineTypes\GeographyType;
-use Karomap\GeoLaravel\DoctrineTypes\GeometryType;
-use Karomap\GeoLaravel\DoctrineTypes\LineStringType;
-use Karomap\GeoLaravel\DoctrineTypes\MultiLineStringType;
-use Karomap\GeoLaravel\DoctrineTypes\MultiPointType;
-use Karomap\GeoLaravel\DoctrineTypes\MultiPolygonType;
-use Karomap\GeoLaravel\DoctrineTypes\PolygonType;
+use App\DoctrineTypes\GeographyType;
+use App\DoctrineTypes\GeometryType;
+use App\DoctrineTypes\LineStringType;
+use App\DoctrineTypes\MultiLineStringType;
+use App\DoctrineTypes\MultiPointType;
+use App\DoctrineTypes\MultiPolygonType;
+use App\DoctrineTypes\PolygonType;
 
 class AppServiceProvider extends ServiceProvider
 {

@@ -3,6 +3,7 @@ import Swal from 'sweetalert2';
 
 $('.delete-confirm').on('click', e => {
     e.preventDefault();
+    const formEl = e.currentTarget.closest('form');
     Swal.fire({
         title: 'Anda yakin menghapus akun ini?',
         text: 'Anda tidak mengulang bisa proses ini',
@@ -13,7 +14,7 @@ $('.delete-confirm').on('click', e => {
         confirmButtonText: 'Iya, hapus!',
     }).then(result => {
         if (result.isConfirmed) {
-            Swal.fire('Telah dihapus!', 'Akun telah terhapus.', 'success');
+            formEl.submit();
         }
     });
 });

@@ -1,6 +1,6 @@
 <?php
 
-namespace Karomap\GeoLaravel\DoctrineTypes;
+namespace App\DoctrineTypes;
 
 class MultiPointType extends GeometryType
 {

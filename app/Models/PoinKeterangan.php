@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 class PoinKeterangan extends Model
 {
     use HasFactory, GeoModel;
-    protected $table = 'W05_PoinKeterangan';
+    protected $table = 'w05_poinketerangan';
     protected $guarded = [];
     public $timestamps = false;
     protected $casts = [
