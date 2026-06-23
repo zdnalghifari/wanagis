@@ -523,6 +523,7 @@ var dataHutan05 = new Group({
 
 var dataHutan19 = new Group({
     title: 'Data 2019',
+    fold: true,
     layers: [penutupLahan, lereng, jenisTanah, lokasi],
 });
 
