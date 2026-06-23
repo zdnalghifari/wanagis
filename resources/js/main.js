@@ -169,7 +169,7 @@ const poin = new VectorLayer({
         return new Style({
             image: new Circle({
                 radius: 5,
-                fill: new Fill({ color: 'rgba(255, 255, 255, 1' }),
+                fill: new Fill({ color: 'rgba(255, 255, 255, 1)' }),
                 stroke: new Stroke({ color: 'black' }),
             }),
             text: new Text({
@@ -223,12 +223,12 @@ const lokasi = new VectorLayer({
     visible: true,
     style: function (feature, resolution) {
         return new Style({
-            fill: new Fill({ color: 'rgba(255, 255, 255, 0.5' }),
+            fill: new Fill({ color: 'rgba(255, 255, 255, 0.5)' }),
             stroke: new Stroke({ color: 'black' }),
             text: new Text({
                 textAlign: 'center',
                 textBaseline: 'bottom',
-                text: feature.get('Petak'),
+                text: feature.get('petak'),
                 font: '30px Calibri,sans-serif',
                 weight: 'Bold',
                 fill: new Fill({ color: 'white' }),
@@ -257,13 +257,13 @@ const jenisTanah = new VectorLayer({
     style: function (feature, resolution) {
         if (feature.get('jenis_tnh') === 'MEDIT.MERAH&RENDZINA') {
             return new Style({
-                fill: new Fill({ color: 'rgba(170, 87, 9, 1' }),
+                fill: new Fill({ color: 'rgba(170, 87, 9, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
         if (feature.get('jenis_tnh') === 'RENDZINA') {
             return new Style({
-                fill: new Fill({ color: 'rgba(120, 30, 15, 1' }),
+                fill: new Fill({ color: 'rgba(120, 30, 15, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
@@ -283,31 +283,31 @@ const lereng = new VectorLayer({
     style: function (feature, resolution) {
         if (feature.get('ket') === 'Datar') {
             return new Style({
-                fill: new Fill({ color: 'rgba(16, 176, 70, 1' }),
+                fill: new Fill({ color: 'rgba(16, 176, 70, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
         if (feature.get('ket') === 'Landai') {
             return new Style({
-                fill: new Fill({ color: 'rgba(126, 241, 10, 1' }),
+                fill: new Fill({ color: 'rgba(126, 241, 10, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
         if (feature.get('ket') === 'Berombak') {
             return new Style({
-                fill: new Fill({ color: 'rgba(243, 239, 9, 1' }),
+                fill: new Fill({ color: 'rgba(243, 239, 9, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
         if (feature.get('ket') === 'Lereng') {
             return new Style({
-                fill: new Fill({ color: 'rgba(248, 161, 3, 1' }),
+                fill: new Fill({ color: 'rgba(248, 161, 3, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
         if (feature.get('ket') === 'Curam') {
             return new Style({
-                fill: new Fill({ color: 'rgba(249, 72, 8, 1' }),
+                fill: new Fill({ color: 'rgba(249, 72, 8, 1)' }),
                 stroke: new Stroke({ color: 'white' }),
             });
         }
@@ -1019,7 +1019,7 @@ jenisTanahLegend.addItem({
     title: 'Medit Merah & Rendzina',
     typeGeom: 'Polygon',
     style: new Style({
-        fill: new Fill({ color: 'rgba(170, 87, 9, 1' }),
+        fill: new Fill({ color: 'rgba(170, 87, 9, 1)' }),
         stroke: new Stroke({ color: 'white' }),
     }),
 });
@@ -1027,7 +1027,7 @@ jenisTanahLegend.addItem({
     title: 'Rendzina',
     typeGeom: 'Polygon',
     style: new Style({
-        fill: new Fill({ color: 'rgba(120, 30, 15, 1' }),
+        fill: new Fill({ color: 'rgba(120, 30, 15, 1)' }),
         stroke: new Stroke({ color: 'white' }),
     }),
 });
@@ -1036,7 +1036,7 @@ lerengLegend.addItem({
     title: 'Datar',
     typeGeom: 'Polygon',
     style: new Style({
-        fill: new Fill({ color: 'rgba(16, 176, 70, 1' }),
+        fill: new Fill({ color: 'rgba(16, 176, 70, 1)' }),
         stroke: new Stroke({ color: 'white' }),
     }),
 });
@@ -1044,7 +1044,7 @@ lerengLegend.addItem({
     title: 'Landai',
     typeGeom: 'Polygon',
     style: new Style({
-        fill: new Fill({ color: 'rgba(126, 241, 10, 1' }),
+        fill: new Fill({ color: 'rgba(126, 241, 10, 1)' }),
         stroke: new Stroke({ color: 'white' }),
     }),
 });
@@ -1052,7 +1052,7 @@ lerengLegend.addItem({
     title: 'Berombak',
     typeGeom: 'Polygon',
     style: new Style({
-        fill: new Fill({ color: 'rgba(243, 239, 9, 1' }),
+        fill: new Fill({ color: 'rgba(243, 239, 9, 1)' }),
         stroke: new Stroke({ color: 'white' }),
     }),
 });
@@ -1060,7 +1060,7 @@ lerengLegend.addItem({
     title: 'Lereng',
     typeGeom: 'Polygon',
     style: new Style({
-        fill: new Fill({ color: 'rgba(248, 161, 3, 1' }),
+        fill: new Fill({ color: 'rgba(248, 161, 3, 1)' }),
         stroke: new Stroke({ color: 'white' }),
     }),
 });
@@ -1068,7 +1068,7 @@ lerengLegend.addItem({
     title: 'Curam',
     typeGeom: 'Polygon',
     style: new Style({
-        fill: new Fill({ color: 'rgba(249, 72, 8, 1' }),
+        fill: new Fill({ color: 'rgba(249, 72, 8, 1)' }),
         stroke: new Stroke({ color: 'white' }),
     }),
 });
