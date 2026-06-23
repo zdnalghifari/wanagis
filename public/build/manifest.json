@@ -1,0 +1,45 @@
+{
+  "public/assets/img/legend.png": {
+    "file": "assets/legend.af68e11b.png",
+    "src": "public/assets/img/legend.png"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app.241a8c35.js",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "imports": [
+      "_lodash.fa1f18bd.js"
+    ]
+  },
+  "resources/js/main.js": {
+    "file": "assets/main.b8c9e32c.js",
+    "src": "resources/js/main.js",
+    "isEntry": true,
+    "imports": [
+      "_lodash.fa1f18bd.js"
+    ]
+  },
+  "_lodash.fa1f18bd.js": {
+    "file": "assets/lodash.fa1f18bd.js"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app.1cdfbc34.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/style.css": {
+    "file": "assets/style.bcd5a08f.css",
+    "src": "resources/css/style.css",
+    "isEntry": true
+  },
+  "node_modules/ol/ol.css": {
+    "file": "assets/ol.ff0860cc.css",
+    "src": "node_modules/ol/ol.css",
+    "isEntry": true
+  },
+  "node_modules/ol-ext/dist/ol-ext.css": {
+    "file": "assets/ol-ext.99e1dfff.css",
+    "src": "node_modules/ol-ext/dist/ol-ext.css",
+    "isEntry": true
+  }
+}
