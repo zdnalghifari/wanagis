@@ -3,10 +3,7 @@
     "builds": [
         {
             "src": "api/index.php",
-            "use": "vercel-php@0.7.2",
-            "config": {
-                "installCommand": "composer install --no-dev && npm ci && npm run build"
-            }
+            "use": "vercel-php@0.7.2"
         }
     ],
     "routes": [
@@ -17,7 +14,7 @@
     ],
     "env": {
         "APP_ENV": "production",
-        "APP_DEBUG": "true",
+        "APP_DEBUG": "false",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
